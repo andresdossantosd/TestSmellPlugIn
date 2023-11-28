@@ -62,16 +62,24 @@
         <version>5.4.2</version>
         <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.apache.maven</groupId>
-      <artifactId>maven-plugin-api</artifactId>
-      <version>2.0</version>
-    </dependency>
-    <dependency>
+		<!-- The maven-plugin-api dependency is required and contains the necessary classes and interfaces to create our mojo -->
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>3.6.3</version>
+		</dependency>
+		<!-- The maven-plugin-annotations dependency comes in handy to use annotations in our classes -->
+		<dependency>
 			<groupId>org.apache.maven.plugin-tools</groupId>
 			<artifactId>maven-plugin-annotations</artifactId>
 			<version>3.6.0</version>
 			<scope>provided</scope>
+		</dependency>
+		<!-- The maven-project dependency lets us access the information about the project where we’re including the plugin. -->
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-project</artifactId>
+			<version>2.2.1</version>
 		</dependency>
 </dependencies>
 </project>
