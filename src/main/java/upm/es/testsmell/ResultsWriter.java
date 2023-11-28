@@ -21,7 +21,7 @@ public class ResultsWriter {
     private ResultsWriter() throws IOException {
         String time =  String.valueOf(Calendar.getInstance().getTimeInMillis());
         outputFile = MessageFormat.format("{0}_{1}_{2}.{3}", "Output","TestSmellDetection",time, "html");
-        System.out.println(outputFile);
+        System.out.println("Output file path "+ outputFile);
         writer = new FileWriter(outputFile,false);
     }
 

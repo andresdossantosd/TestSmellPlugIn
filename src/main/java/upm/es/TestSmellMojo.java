@@ -53,8 +53,8 @@ public class TestSmellMojo
     public void execute()
         throws MojoExecutionException
     {
-        
-        System.out.println(pathToTestFiles);
+        System.out.println("Username "+ System.getProperty("user.name"));
+        System.out.println("Path to test files "+pathToTestFiles);
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         if (pathToTestFiles == null) {
             System.out.println("null"+"Please provide the file containing the paths to the collection of test files"+pathToTestFiles);
@@ -63,7 +63,7 @@ public class TestSmellMojo
         if(!pathToTestFiles.isEmpty()){
             File inputFile = new File(pathToTestFiles);
             if(!inputFile.exists() || inputFile.isDirectory()) {
-                System.out.println("isEmpty() "+"Please provide the file containing the paths to the collection of test files"+pathToTestFiles);
+                System.out.println("isEmpty() "+!inputFile.exists()+" "+inputFile.isDirectory()+" Please provide the file containing the paths to the collection of test files "+pathToTestFiles);
                 return;
             }
         }
