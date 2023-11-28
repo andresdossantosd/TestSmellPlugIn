@@ -53,7 +53,9 @@ public class TestSmellMojo
     public void execute()
         throws MojoExecutionException
     {
+        
         System.out.println(pathToTestFiles);
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
         if (pathToTestFiles == null) {
             System.out.println("null"+"Please provide the file containing the paths to the collection of test files"+pathToTestFiles);
             return;
